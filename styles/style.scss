@@ -1,0 +1,99 @@
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75); //For Paragraphs
+$very-light-gray: hsl(0, 0%, 95%); //For Backgrounds, Headings and Buttons
+$lexend-deca-font: 'Lexend Deca', sans-serif;
+$big-shoulders-display-font: 'Big Shoulders Display', cursive;
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+body, html{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 1150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $very-light-gray;
+    .cols-container {
+        width: 90%;
+        height: 95%;
+        margin: 20px 0 20px 0;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        .column {
+            position: relative;
+            padding: 35px;
+            flex-grow: 1;
+            &:nth-child(1){
+                background-color: $bright-orange;
+                border-radius: 10px 10px 0 0;
+                .learn-more-btn{
+                    color: $bright-orange;
+                }
+            }
+            &:nth-child(2){
+                background-color: $dark-cyan;
+                .learn-more-btn{
+                    color: $dark-cyan;
+                }
+            }
+            &:nth-child(3){
+                background-color: $very-dark-cyan;
+                border-radius: 0 0 10px 10px;
+                .learn-more-btn{
+                    color: $very-dark-cyan;
+                }
+            }
+            img {
+                display: block;
+            }
+            .car-name{
+                color: $very-light-gray;
+                font-family: $big-shoulders-display-font;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin: 30px 0 20px 0;
+            }
+            .car-description {
+                color: $transparent-white;
+                font-family: $lexend-deca-font;
+                font-size: 0.9rem;
+                line-height: 25px;
+            }
+            .learn-more-btn {
+                position: absolute;
+                bottom: 40px;
+                text-decoration: none;
+                font-family: $lexend-deca-font;
+                background-color: $very-light-gray;
+                padding: 15px 30px 15px;
+                border-radius: 30px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 800px) {
+    body, html {
+        height: 100% !important;
+        .cols-container{
+            width: 60% !important;
+            height: 450px !important;
+            flex-direction: row !important;
+            .column {
+                &:nth-child(1){
+                    border-radius: 10px 0 0 10px !important;
+                }
+                &:nth-child(3){
+                    border-radius: 0 10px 10px 0 !important;
+                }
+            }
+        }
+    }
+    
+}
