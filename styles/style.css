@@ -68,6 +68,13 @@ body .cols-container .column .learn-more-btn, html .cols-container .column .lear
   padding: 15px 30px 15px;
   border-radius: 30px;
   letter-spacing: 1px;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+}
+body .cols-container .column .learn-more-btn:hover, html .cols-container .column .learn-more-btn:hover {
+  border-color: #FFF;
+  background-color: transparent;
+  color: #FFF;
 }
 
 @media only screen and (min-width: 800px) {
@@ -76,7 +83,7 @@ body .cols-container .column .learn-more-btn, html .cols-container .column .lear
   }
   body .cols-container, html .cols-container {
     width: 60% !important;
-    height: 450px !important;
+    height: 75% !important;
     flex-direction: row !important;
   }
   body .cols-container .column:nth-child(1), html .cols-container .column:nth-child(1) {

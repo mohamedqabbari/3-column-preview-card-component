@@ -74,6 +74,13 @@ body, html{
                 padding: 15px 30px 15px;
                 border-radius: 30px;
                 letter-spacing: 1px;
+                border: 2px solid transparent;
+                transition: all 0.25s ease;
+                &:hover {
+                    border-color: #FFF;
+                    background-color: transparent;
+                    color: #FFF;
+                }
             }
         }
     }
@@ -83,7 +90,7 @@ body, html{
         height: 100% !important;
         .cols-container{
             width: 60% !important;
-            height: 450px !important;
+            height: 75% !important;
             flex-direction: row !important;
             .column {
                 &:nth-child(1){
